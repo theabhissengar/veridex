@@ -25,11 +25,11 @@ Use a short prefix: `feat:`, `fix:`, `refactor:`, `test:`, `chore:`, `docs:`.
 
 Describe the change and how you tested it. Required checks must pass, conversations must be resolved, and the branch must be up to date before merge.
 
-Required checks:
+Required checks, from the `CI` workflow:
 
-- `CI / backend`
-- `CI / frontend`
-- `CI / docker`
+- `backend`
+- `frontend`
+- `docker`
 
 ## Local checks
 

@@ -32,6 +32,8 @@ $env:VERIDEX_DATABASE_URL="postgresql+psycopg://veridex:veridex@localhost:5433/v
 pytest tests/test_api.py
 ```
 
+Branching, pull requests, and the same checks CI runs are in [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Layout
 
 - `apps/web` — Next.js UI

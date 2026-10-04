@@ -12,7 +12,7 @@ __pycache__/
 dist/
 build/
 weights/
-storage/
+/storage/
 .env
 .env.local
 .playwright/

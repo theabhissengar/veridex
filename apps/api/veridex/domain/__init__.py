@@ -1,0 +1,1 @@
+"""Pure investigation rules."""

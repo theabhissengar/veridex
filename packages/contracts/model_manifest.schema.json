@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://veridex.local/contracts/model_manifest.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["models"],
+  "properties": {
+    "models": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "version", "license", "source", "commercial_use", "role"],
+        "properties": {
+          "name": { "type": "string" },
+          "version": { "type": "string" },
+          "license": { "type": "string" },
+          "source": { "type": "string" },
+          "commercial_use": { "type": "string" },
+          "role": { "enum": ["detector", "ocr"] }
+        }
+      }
+    }
+  }
+}

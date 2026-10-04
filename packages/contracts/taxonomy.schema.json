@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://veridex.local/contracts/taxonomy.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "classes"],
+  "properties": {
+    "version": { "type": "string", "minLength": 1 },
+    "classes": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/class" }
+    }
+  },
+  "$defs": {
+    "class": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["canonical_class", "display_name", "category", "order_relevant"],
+      "properties": {
+        "canonical_class": { "type": "string", "minLength": 1 },
+        "display_name": { "type": "string", "minLength": 1 },
+        "category": {
+          "enum": ["PRODUCT", "ACCESSORY", "PACKAGING", "SHIPPING_MATERIAL", "DOCUMENT", "OTHER", "UNKNOWN"]
+        },
+        "order_relevant": { "type": "boolean" }
+      }
+    }
+  }
+}

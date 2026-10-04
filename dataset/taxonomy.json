@@ -1,0 +1,29 @@
+{
+  "version": "1",
+  "classes": [
+    {
+      "canonical_class": "sony_wh1000xm5",
+      "display_name": "Sony WH-1000XM5",
+      "category": "PRODUCT",
+      "order_relevant": true
+    },
+    {
+      "canonical_class": "jbl_tune",
+      "display_name": "JBL Tune headphones",
+      "category": "PRODUCT",
+      "order_relevant": true
+    },
+    {
+      "canonical_class": "usb_c_cable",
+      "display_name": "USB-C cable",
+      "category": "ACCESSORY",
+      "order_relevant": true
+    },
+    {
+      "canonical_class": "cardboard_box",
+      "display_name": "Cardboard box",
+      "category": "PACKAGING",
+      "order_relevant": false
+    }
+  ]
+}

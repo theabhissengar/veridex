@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://veridex.local/contracts/ground_truth.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["case_id", "tier", "dispute_type", "expected_items", "assessment"],
+  "properties": {
+    "case_id": { "type": "string" },
+    "tier": { "enum": ["fixture", "development", "evaluation"] },
+    "dispute_type": { "enum": ["none", "missing_item", "wrong_item", "quantity_mismatch"] },
+    "expected_items": { "type": "array" },
+    "media": { "type": "array" },
+    "coverage": { "type": "array" },
+    "questions": { "type": "array" },
+    "intervals": { "type": "array" },
+    "observations": { "type": "array" },
+    "findings": { "type": "array" },
+    "assessment": { "enum": ["supported", "partially_supported", "unresolved", "insufficient_evidence"] },
+    "assessment_rationale": { "type": "string" },
+    "timeline": { "type": "array" },
+    "notes": { "type": "string" }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "models": [
+    {
+      "name": "yolov8n",
+      "version": "unspecified",
+      "license": "",
+      "source": "https://github.com/ultralytics/ultralytics",
+      "commercial_use": "Not reviewed. Prototyping only until a license review. Do not assume commercial use is allowed.",
+      "role": "detector"
+    },
+    {
+      "name": "paddleocr",
+      "version": "unspecified",
+      "license": "",
+      "source": "https://github.com/PaddlePaddle/PaddleOCR",
+      "commercial_use": "Not reviewed. Prototyping only until a license review. Do not assume commercial use is allowed.",
+      "role": "ocr"
+    }
+  ]
+}

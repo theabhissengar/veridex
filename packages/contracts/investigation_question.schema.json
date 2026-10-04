@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://veridex.local/contracts/investigation_question.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["question_key", "subject", "aspect", "required_roles", "canonical_class", "primary", "applicability"],
+  "properties": {
+    "question_key": { "type": "string", "pattern": "^item:[^:]+:(presence|quantity|identity)$" },
+    "subject": { "type": "string" },
+    "aspect": { "enum": ["presence", "quantity", "identity"] },
+    "required_roles": {
+      "type": "array",
+      "items": {
+        "enum": ["packing_video", "unboxing_video", "product_photo", "invoice", "customer_statement", "seller_statement", "shipping", "order_file"]
+      }
+    },
+    "order_item_id": { "type": ["string", "null"] },
+    "canonical_class": { "type": "string" },
+    "primary": { "type": "boolean" },
+    "applicability": { "enum": ["applicable", "not_applicable"] },
+    "evaluation_status": { "enum": ["proven", "conflicting", "unknown", "not_applicable", null] }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://veridex.local/contracts/evidence_observation.schema.json",
+  "type": "object",
+  "required": ["observation_type"],
+  "properties": {
+    "observation_type": { "enum": ["object", "document_text", "statement", "shipping_event"] },
+    "canonical_class": { "type": ["string", "null"] },
+    "category": {
+      "enum": ["PRODUCT", "ACCESSORY", "PACKAGING", "SHIPPING_MATERIAL", "DOCUMENT", "OTHER", "UNKNOWN", null]
+    },
+    "observed_quantity_estimate": { "type": ["integer", "null"], "minimum": 0 },
+    "quantity_strength": { "enum": ["high", "medium", "low", null] },
+    "observation_strength": { "enum": ["high", "medium", "low", null] },
+    "normalized_text": { "type": ["string", "null"] },
+    "page_number": { "type": ["integer", "null"] },
+    "party": { "enum": ["seller", "customer", "carrier", "platform", null] },
+    "statement_text": { "type": ["string", "null"] },
+    "shipping_event_type": { "type": ["string", "null"] }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "observation_type": { "const": "object" } }, "required": ["observation_type"] },
+      "then": { "required": ["canonical_class", "observed_quantity_estimate", "quantity_strength"] }
+    },
+    {
+      "if": { "properties": { "observation_type": { "const": "document_text" } }, "required": ["observation_type"] },
+      "then": { "required": ["normalized_text"] }
+    },
+    {
+      "if": { "properties": { "observation_type": { "const": "statement" } }, "required": ["observation_type"] },
+      "then": { "required": ["party", "statement_text"] }
+    },
+    {
+      "if": { "properties": { "observation_type": { "const": "shipping_event" } }, "required": ["observation_type"] },
+      "then": { "required": ["shipping_event_type"] }
+    }
+  ]
+}

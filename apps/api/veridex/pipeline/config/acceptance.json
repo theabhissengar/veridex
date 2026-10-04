@@ -1,0 +1,15 @@
+{
+  "version": "1",
+  "min_detector_confidence": 0.5,
+  "min_supporting_frames": 3,
+  "min_persistence_ms": 200,
+  "max_confidence_spread": 0.2,
+  "max_bbox_center_drift": 0.25,
+  "min_stable_frames": 3,
+  "max_gap_ms": 1500,
+  "quantity_tolerance": 0,
+  "min_quantity_strength": "medium",
+  "sufficient_coverage": ["complete"],
+  "short_duration_ms": 15000,
+  "min_sampling_fps": 0.5
+}

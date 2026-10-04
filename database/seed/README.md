@@ -1,0 +1,1 @@
+Seed rows for local cases live in the API, not in this folder. Taxonomy classes are in `dataset/taxonomy.json`. Run `alembic upgrade head` from `apps/api` before the API starts. Compose does that on API startup.

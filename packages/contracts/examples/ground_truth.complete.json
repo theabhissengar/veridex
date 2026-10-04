@@ -1,0 +1,29 @@
+{
+  "case_id": "example_complete",
+  "tier": "fixture",
+  "dispute_type": "none",
+  "expected_items": [
+    {
+      "sku": "SKU-CABLE",
+      "canonical_class": "usb_c_cable",
+      "category": "ACCESSORY",
+      "quantity": 1
+    }
+  ],
+  "media": [
+    { "role": "packing_video", "file": "packing.mp4", "examined": true },
+    { "role": "unboxing_video", "file": "unboxing.mp4", "examined": true }
+  ],
+  "coverage": [
+    { "role": "packing_video", "suggested_coverage": "unassessed", "final_coverage": "complete" },
+    { "role": "unboxing_video", "suggested_coverage": "unassessed", "final_coverage": "complete" }
+  ],
+  "questions": [],
+  "intervals": [],
+  "observations": [],
+  "findings": [],
+  "assessment": "supported",
+  "assessment_rationale": "Example label only. Not a filmed case.",
+  "timeline": [],
+  "notes": "Schema example. Not training media."
+}
